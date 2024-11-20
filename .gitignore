@@ -1,3 +1,7 @@
+model_midtrain_results/
+final_model/
+final_interrupted_model/
+logs/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
