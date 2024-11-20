@@ -16,6 +16,7 @@ except ImportError:
     from data import get_dataset
 import deepspeed
 deepspeed.ops.op_builder.CPUAdamBuilder().load()
+torch.cuda.empty_cache()
 
 def train(model, tokenized_dataset, tokenizer, device):
 
@@ -76,10 +77,10 @@ def train(model, tokenized_dataset, tokenizer, device):
             "type": "AdamW",
             "params": {
                 "adam_w_mode": True,
-                "lr": 3e-5,
+                "lr": "auto",
                 "betas": [ 0.9, 0.999 ],
                 "eps": 1e-8,
-                "weight_decay": 3e-7
+                "weight_decay": "auto"
             }
         },
 
@@ -87,7 +88,7 @@ def train(model, tokenized_dataset, tokenizer, device):
             "type": "WarmupLR",
             "params": {
                 "warmup_min_lr": 0,
-                "warmup_max_lr": 3e-5,
+                "warmup_max_lr": "auto",
                 "warmup_num_steps": "auto"
             }
         },
@@ -107,17 +108,29 @@ def train(model, tokenized_dataset, tokenizer, device):
         gradient_checkpointing=True,  # Enable gradient checkpointing for memory efficiency
         log_level="debug",  # Set logging level to debug for detailed logs
         logging_steps=10,  # Log metrics every 10 steps
-        learning_rate=3e-5,  # Initial learning rate
-        weight_decay=3e-7,  # Weight decay for regularization
+        learning_rate=1e-4,  # Initial learning rate
+        weight_decay=0.01,  # Weight decay for regularization
         fp16=True,  # Enable mixed precision training
-        eval_steps=100,  # Evaluate the model every 25 steps
-        max_steps=100,  # Total number of training steps
-        save_steps=25,  # Save checkpoints every 25 steps
-        warmup_steps=10,  # Number of warmup steps for learning rate scheduler
+        eval_steps=75,  # Evaluate the model every 25 steps
+        max_steps=3600,  # Total number of training steps
+        save_steps=75,  # Save checkpoints every 25 steps
+        warmup_steps=30,  # Number of warmup steps for learning rate scheduler
         lr_scheduler_type="linear",  # Use a linear learning rate scheduler
         deepspeed=ds_training_arguments,  # DeepSpeed training arguments
         logging_dir='./logs',  # Directory for TensorBoard logs
     )
+
+    # On eval 1.3 it/s on average * 521 = 401 secs.
+    # +
+    # Let's say 1 minute on average to save the model
+    # =
+    # 460 seconds
+    # Model takes 17.5s/it on average;
+    # 86400 available seconds, max 86400 / 17.5 = 4937 iterations; 
+    # Let's save every 30 minutes, that makes 48 saves * 460 = 22080
+    # 86400 - 22080 = 64320 seconds left
+    # 64320 / 17.5 = 3675 iterations; Let's do 3600 to be sure.
+    # 3600 / 48 = 75; Save every 75 steps 
 
     # Initialize the Supervised Fine-Tuning (SFT) Trainer
     print("Initializing trainer...")
