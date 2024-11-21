@@ -1,5 +1,5 @@
 import torch
-from peft import LoraConfig
+from peft import LoraConfig, get_peft_model, PeftModel
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -18,7 +18,7 @@ import deepspeed
 deepspeed.ops.op_builder.CPUAdamBuilder().load()
 torch.cuda.empty_cache()
 
-def train(model, tokenized_dataset, tokenizer, device):
+def train(model, lora_location, tokenized_dataset, tokenizer, device):
 
     # Enable gradient checkpointing for memory efficiency
     print("Enabling gradient checkpointing...")
@@ -43,6 +43,7 @@ def train(model, tokenized_dataset, tokenizer, device):
             "down_proj",
         ],
     )
+    model = get_peft_model(model, peft_config)
 
     # Define DeepSpeed training arguments for the fine-tuning process
     # Using Zero-2 optimization for memory efficiency
@@ -98,7 +99,7 @@ def train(model, tokenized_dataset, tokenizer, device):
     # Define training arguments for the fine-tuning process
     print("Setting up training arguments...")
     training_arguments = TrainingArguments(
-        output_dir="./model_midtrain_results_1050",  # Directory for saving model checkpoints and logs
+        output_dir="./model_midtrain_results",  # Directory for saving model checkpoints and logs
         eval_strategy="steps",  # Evaluation strategy: evaluate every few steps
         do_eval=True,  # Enable evaluation during training
         optim="paged_adamw_8bit",  # Use 8-bit AdamW optimizer for memory efficiency
@@ -112,8 +113,8 @@ def train(model, tokenized_dataset, tokenizer, device):
         weight_decay=0.01,  # Weight decay for regularization
         fp16=True,  # Enable mixed precision training
         eval_steps=75,  # Evaluate the model every 25 steps
-        # max_steps=3600,  # Total number of training steps
-        max_steps=2550,  # Total number of training steps - started at 1050
+        max_steps=3600,  # Total number of training steps
+        # max_steps=2550,  # Total number of training steps - started at 1050
         save_steps=75,  # Save checkpoints every 25 steps
         warmup_steps=30,  # Number of warmup steps for learning rate scheduler
         lr_scheduler_type="linear",  # Use a linear learning rate scheduler
@@ -148,7 +149,7 @@ def train(model, tokenized_dataset, tokenizer, device):
     # Start the fine-tuning process
     print("Starting training...")
     try:
-        trainer.train()
+        trainer.train(resume_from_checkpoint=lora_location)
     except KeyboardInterrupt:
         print("Training interrupted. Saving the model...")
         trainer.save_model("./final_interrupted_model")
@@ -166,6 +167,7 @@ if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
     # Model name
     model_name = "Qwen/Qwen2.5-7B"
+    lora_location = "model_midtrain_results/checkpoint-1050/"
     
     # Load the pre-trained model
     print(f"Loading model {model_name}...")
@@ -187,7 +189,7 @@ if __name__ == "__main__":
     
 
     model = AutoModelForCausalLM.from_pretrained(
-        model_name, 
+        lora_location, 
         torch_dtype=torch.float16,  # Use float16 for mixed precision training
         device_map="auto",  # Distribute the model automatically across GPUs
         # quantization_config=nf4_config,  # Use the bitsandbytes quantization NF4 config
@@ -202,7 +204,7 @@ if __name__ == "__main__":
     print("Dataset and tokenizer loaded.")
 
     # Train the model
-    trainer = train(model, tokenized_dataset, tokenizer, device)
+    trainer = train(model, lora_location, tokenized_dataset, tokenizer, device)
 
     # TensorBoard logging
     print("Training complete. You can now monitor the training progress in TensorBoard.")

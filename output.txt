@@ -1,0 +1,756 @@
+{'loss': 1.8971, 'grad_norm': 0.49890583753585815, 'learning_rate': 7.759200756309999e-05, 'epoch': 0.0}                                                                                                    
+{'loss': 1.6661, 'grad_norm': 1.6535608768463135, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                    
+{'loss': 1.4684, 'grad_norm': 1.0714327096939087, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                    
+{'loss': 1.5553, 'grad_norm': 0.6442272067070007, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                    
+{'loss': 1.5007, 'grad_norm': 0.818639874458313, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                     
+{'loss': 1.2678, 'grad_norm': 1.3463096618652344, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                    
+{'loss': 1.4836, 'grad_norm': 0.8409688472747803, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                    
+  2%|███▍                                                                                                                                                              | 75/3600 [13:59<10:26:12, 10.66s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4955415725708008, 'eval_runtime': 328.1939, 'eval_samples_per_second': 1.587, 'eval_steps_per_second': 1.587, 'epoch': 0.0}                                                                 
+  2%|███▍                                                                                                                                                              | 75/3600 [19:28<10:26:12, 10.66s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-75                                                                                                                                            
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-75/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-75/special_tokens_map.json
+[2024-11-20 19:19:55,795] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step150 is about to be saved!
+[2024-11-20 19:19:55,810] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-75/global_step150/mp_rank_00_model_states.pt
+[2024-11-20 19:19:55,810] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-75/global_step150/mp_rank_00_model_states.pt...
+[2024-11-20 19:19:56,058] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-75/global_step150/mp_rank_00_model_states.pt.
+[2024-11-20 19:19:56,059] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-75/global_step150/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 19:19:57,035] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-75/global_step150/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 19:19:57,036] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-75/global_step150/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 19:19:57,036] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step150 is ready now!
+{'loss': 1.5626, 'grad_norm': 0.49311453104019165, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                   
+{'loss': 1.4427, 'grad_norm': 0.5505372881889343, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                    
+{'loss': 1.4702, 'grad_norm': 1.1296964883804321, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                    
+{'loss': 1.5806, 'grad_norm': 1.38261878490448, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                      
+{'loss': 1.4675, 'grad_norm': 0.5213516354560852, 'learning_rate': 0.0001, 'epoch': 0.0}                                                                                                                    
+{'loss': 1.6413, 'grad_norm': 2.93784761428833, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                     
+{'loss': 1.2942, 'grad_norm': 0.6772735118865967, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.4082, 'grad_norm': 1.1066700220108032, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+  4%|██████▋                                                                                                                                                          | 150/3600 [33:51<11:02:53, 11.53s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4717903137207031, 'eval_runtime': 419.3037, 'eval_samples_per_second': 1.243, 'eval_steps_per_second': 1.243, 'epoch': 0.01}                                                                
+  4%|██████▋                                                                                                                                                          | 150/3600 [40:51<11:02:53, 11.53s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-150                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-150/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-150/special_tokens_map.json
+[2024-11-20 19:41:19,032] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step300 is about to be saved!
+[2024-11-20 19:41:19,046] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-150/global_step300/mp_rank_00_model_states.pt
+[2024-11-20 19:41:19,046] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-150/global_step300/mp_rank_00_model_states.pt...
+[2024-11-20 19:41:19,281] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-150/global_step300/mp_rank_00_model_states.pt.
+[2024-11-20 19:41:19,281] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-150/global_step300/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 19:41:20,263] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-150/global_step300/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 19:41:20,264] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-150/global_step300/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 19:41:20,264] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step300 is ready now!
+{'loss': 1.6572, 'grad_norm': 0.5077598690986633, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.7344, 'grad_norm': 0.5666481256484985, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.3634, 'grad_norm': 0.7042965888977051, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.6191, 'grad_norm': 0.6379776000976562, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.2186, 'grad_norm': 0.7309342622756958, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.5201, 'grad_norm': 1.4138643741607666, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.4056, 'grad_norm': 1.3856728076934814, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+  6%|██████████                                                                                                                                                       | 225/3600 [55:07<10:43:27, 11.44s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.473658800125122, 'eval_runtime': 413.7612, 'eval_samples_per_second': 1.259, 'eval_steps_per_second': 1.259, 'epoch': 0.01}                                                                 
+  6%|█████████▉                                                                                                                                                     | 225/3600 [1:02:01<10:43:27, 11.44s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-225                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-225/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-225/special_tokens_map.json
+[2024-11-20 20:02:30,278] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step450 is about to be saved!
+[2024-11-20 20:02:30,293] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-225/global_step450/mp_rank_00_model_states.pt
+[2024-11-20 20:02:30,293] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-225/global_step450/mp_rank_00_model_states.pt...
+[2024-11-20 20:02:30,532] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-225/global_step450/mp_rank_00_model_states.pt.
+[2024-11-20 20:02:30,533] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-225/global_step450/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 20:02:31,574] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-225/global_step450/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 20:02:31,574] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-225/global_step450/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 20:02:31,574] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step450 is ready now!
+{'loss': 1.5261, 'grad_norm': 1.1668083667755127, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.4151, 'grad_norm': 0.719367265701294, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                    
+{'loss': 1.3723, 'grad_norm': 0.7443403005599976, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.5165, 'grad_norm': 0.8915978670120239, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.4225, 'grad_norm': 0.7369945049285889, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.3462, 'grad_norm': 1.2632057666778564, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.4283, 'grad_norm': 1.6178512573242188, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.4773, 'grad_norm': 2.717789649963379, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                    
+  8%|█████████████▎                                                                                                                                                 | 300/3600 [1:16:35<10:55:49, 11.92s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4709599018096924, 'eval_runtime': 410.5517, 'eval_samples_per_second': 1.269, 'eval_steps_per_second': 1.269, 'epoch': 0.01}                                                                
+  8%|█████████████▎                                                                                                                                                 | 300/3600 [1:23:26<10:55:49, 11.92s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-300                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-300/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-300/special_tokens_map.json
+[2024-11-20 20:23:53,615] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step600 is about to be saved!
+[2024-11-20 20:23:53,630] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-300/global_step600/mp_rank_00_model_states.pt
+[2024-11-20 20:23:53,630] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-300/global_step600/mp_rank_00_model_states.pt...
+[2024-11-20 20:23:53,860] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-300/global_step600/mp_rank_00_model_states.pt.
+[2024-11-20 20:23:53,861] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-300/global_step600/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 20:23:54,921] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-300/global_step600/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 20:23:54,921] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-300/global_step600/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 20:23:54,921] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step600 is ready now!
+{'loss': 1.4183, 'grad_norm': 3.8710834980010986, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.6159, 'grad_norm': 1.1690031290054321, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.5327, 'grad_norm': 1.422135829925537, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                    
+{'loss': 1.4782, 'grad_norm': 1.353925347328186, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                    
+{'loss': 1.3199, 'grad_norm': 0.8083727359771729, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.3829, 'grad_norm': 0.6409865021705627, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.3386, 'grad_norm': 1.9057331085205078, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+ 10%|████████████████▌                                                                                                                                              | 375/3600 [1:38:01<10:12:35, 11.40s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4621069431304932, 'eval_runtime': 410.8963, 'eval_samples_per_second': 1.268, 'eval_steps_per_second': 1.268, 'epoch': 0.01}                                                                
+ 10%|████████████████▌                                                                                                                                              | 375/3600 [1:44:52<10:12:35, 11.40s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-375                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-375/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-375/special_tokens_map.json
+[2024-11-20 20:45:19,831] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step750 is about to be saved!
+[2024-11-20 20:45:19,844] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-375/global_step750/mp_rank_00_model_states.pt
+[2024-11-20 20:45:19,844] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-375/global_step750/mp_rank_00_model_states.pt...
+[2024-11-20 20:45:20,073] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-375/global_step750/mp_rank_00_model_states.pt.
+[2024-11-20 20:45:20,074] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-375/global_step750/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 20:45:21,174] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-375/global_step750/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 20:45:21,175] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-375/global_step750/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 20:45:21,175] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step750 is ready now!
+{'loss': 1.4447, 'grad_norm': 1.4260625839233398, 'learning_rate': 0.0001, 'epoch': 0.01}                                                                                                                   
+{'loss': 1.4396, 'grad_norm': 2.0252511501312256, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.5377, 'grad_norm': 1.5493030548095703, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.5368, 'grad_norm': 1.5620871782302856, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.4932, 'grad_norm': 1.8342182636260986, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.4847, 'grad_norm': 0.8918685913085938, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.5184, 'grad_norm': 1.4548940658569336, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.4276, 'grad_norm': 1.4839730262756348, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+ 12%|███████████████████▉                                                                                                                                           | 450/3600 [1:59:18<10:19:07, 11.79s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4603033065795898, 'eval_runtime': 408.9003, 'eval_samples_per_second': 1.274, 'eval_steps_per_second': 1.274, 'epoch': 0.02}                                                                
+ 12%|███████████████████▉                                                                                                                                           | 450/3600 [2:06:07<10:19:07, 11.79s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-450                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-450/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-450/special_tokens_map.json
+[2024-11-20 21:06:34,880] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step900 is about to be saved!
+[2024-11-20 21:06:34,893] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-450/global_step900/mp_rank_00_model_states.pt
+[2024-11-20 21:06:34,893] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-450/global_step900/mp_rank_00_model_states.pt...
+[2024-11-20 21:06:35,118] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-450/global_step900/mp_rank_00_model_states.pt.
+[2024-11-20 21:06:35,118] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-450/global_step900/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 21:06:36,160] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-450/global_step900/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 21:06:36,160] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-450/global_step900/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 21:06:36,160] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step900 is ready now!
+{'loss': 1.3042, 'grad_norm': 0.6719891428947449, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.454, 'grad_norm': 0.8530905246734619, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                    
+{'loss': 1.4225, 'grad_norm': 0.8087925910949707, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.4617, 'grad_norm': 2.091627359390259, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                    
+{'loss': 1.5124, 'grad_norm': 2.1747212409973145, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.4442, 'grad_norm': 1.7147002220153809, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.4376, 'grad_norm': 0.7326516509056091, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+ 15%|███████████████████████▎                                                                                                                                        | 525/3600 [2:20:23<9:32:19, 11.17s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4605984687805176, 'eval_runtime': 418.9148, 'eval_samples_per_second': 1.244, 'eval_steps_per_second': 1.244, 'epoch': 0.02}                                                                
+ 15%|███████████████████████▎                                                                                                                                        | 525/3600 [2:27:22<9:32:19, 11.17s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-525                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-525/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-525/special_tokens_map.json
+[2024-11-20 21:27:49,818] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step1050 is about to be saved!
+[2024-11-20 21:27:49,832] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-525/global_step1050/mp_rank_00_model_states.pt
+[2024-11-20 21:27:49,832] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-525/global_step1050/mp_rank_00_model_states.pt...
+[2024-11-20 21:27:50,058] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-525/global_step1050/mp_rank_00_model_states.pt.
+[2024-11-20 21:27:50,059] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-525/global_step1050/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 21:27:50,967] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-525/global_step1050/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 21:27:50,967] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-525/global_step1050/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 21:27:50,967] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1050 is ready now!
+{'loss': 1.4911, 'grad_norm': 1.7703779935836792, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.4079, 'grad_norm': 0.8552814722061157, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.5769, 'grad_norm': 1.0003011226654053, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.2431, 'grad_norm': 1.0176352262496948, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.5053, 'grad_norm': 1.8341186046600342, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.5135, 'grad_norm': 0.7317614555358887, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.2935, 'grad_norm': 1.3072996139526367, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.4028, 'grad_norm': 0.5384438633918762, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+ 17%|██████████████████████████▋                                                                                                                                     | 600/3600 [2:41:59<9:38:06, 11.56s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.457323670387268, 'eval_runtime': 419.1828, 'eval_samples_per_second': 1.243, 'eval_steps_per_second': 1.243, 'epoch': 0.02}                                                                 
+ 17%|██████████████████████████▋                                                                                                                                     | 600/3600 [2:48:58<9:38:06, 11.56s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-600                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-600/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-600/special_tokens_map.json
+[2024-11-20 21:49:26,352] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step1200 is about to be saved!
+[2024-11-20 21:49:26,365] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-600/global_step1200/mp_rank_00_model_states.pt
+[2024-11-20 21:49:26,365] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-600/global_step1200/mp_rank_00_model_states.pt...
+[2024-11-20 21:49:26,586] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-600/global_step1200/mp_rank_00_model_states.pt.
+[2024-11-20 21:49:26,587] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-600/global_step1200/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 21:49:27,546] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-600/global_step1200/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 21:49:27,546] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-600/global_step1200/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 21:49:27,546] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1200 is ready now!
+{'loss': 1.3461, 'grad_norm': 0.6213059425354004, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                   
+{'loss': 1.458, 'grad_norm': 0.9022939801216125, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                    
+{'loss': 1.3387, 'grad_norm': 1.511841893196106, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                    
+{'loss': 1.25, 'grad_norm': 1.193332552909851, 'learning_rate': 0.0001, 'epoch': 0.02}                                                                                                                      
+{'loss': 1.4608, 'grad_norm': 0.664730429649353, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                    
+{'loss': 1.4694, 'grad_norm': 0.9817675352096558, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.6154, 'grad_norm': 0.8713122606277466, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+ 19%|██████████████████████████████                                                                                                                                  | 675/3600 [3:03:23<9:02:12, 11.12s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4552098512649536, 'eval_runtime': 418.233, 'eval_samples_per_second': 1.246, 'eval_steps_per_second': 1.246, 'epoch': 0.03}                                                                 
+ 19%|██████████████████████████████                                                                                                                                  | 675/3600 [3:10:21<9:02:12, 11.12s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-675                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-675/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-675/special_tokens_map.json
+[2024-11-20 22:10:50,878] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step1350 is about to be saved!
+[2024-11-20 22:10:50,891] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-675/global_step1350/mp_rank_00_model_states.pt
+[2024-11-20 22:10:50,891] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-675/global_step1350/mp_rank_00_model_states.pt...
+[2024-11-20 22:10:51,150] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-675/global_step1350/mp_rank_00_model_states.pt.
+[2024-11-20 22:10:51,151] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-675/global_step1350/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 22:10:52,124] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-675/global_step1350/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 22:10:52,124] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-675/global_step1350/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 22:10:52,124] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1350 is ready now!
+{'loss': 1.6028, 'grad_norm': 0.8656709790229797, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.454, 'grad_norm': 0.7827064990997314, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                    
+{'loss': 1.377, 'grad_norm': 0.8780921101570129, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                    
+{'loss': 1.3761, 'grad_norm': 0.664682149887085, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                    
+{'loss': 1.293, 'grad_norm': 1.6883013248443604, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                    
+{'loss': 1.3595, 'grad_norm': 0.6659910082817078, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.3881, 'grad_norm': 1.0495606660842896, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.3353, 'grad_norm': 2.0675432682037354, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+ 21%|█████████████████████████████████▏                                                                                                                             | 750/3600 [3:25:25<10:30:55, 13.28s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4496526718139648, 'eval_runtime': 412.105, 'eval_samples_per_second': 1.264, 'eval_steps_per_second': 1.264, 'epoch': 0.03}                                                                 
+ 21%|█████████████████████████████████▏                                                                                                                             | 750/3600 [3:32:17<10:30:55, 13.28s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-750                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-750/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-750/special_tokens_map.json
+[2024-11-20 22:32:45,419] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step1500 is about to be saved!
+[2024-11-20 22:32:45,432] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-750/global_step1500/mp_rank_00_model_states.pt
+[2024-11-20 22:32:45,432] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-750/global_step1500/mp_rank_00_model_states.pt...
+[2024-11-20 22:32:45,669] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-750/global_step1500/mp_rank_00_model_states.pt.
+[2024-11-20 22:32:45,670] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-750/global_step1500/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 22:32:46,610] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-750/global_step1500/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 22:32:46,610] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-750/global_step1500/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 22:32:46,610] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1500 is ready now!
+{'loss': 1.4715, 'grad_norm': 2.147975444793701, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                    
+{'loss': 1.704, 'grad_norm': 1.4400185346603394, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                    
+{'loss': 1.2531, 'grad_norm': 0.5840633511543274, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.6409, 'grad_norm': 1.9958975315093994, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.3866, 'grad_norm': 0.4322706460952759, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.2862, 'grad_norm': 0.9608808755874634, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.4305, 'grad_norm': 1.0402257442474365, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+ 23%|████████████████████████████████████▋                                                                                                                           | 825/3600 [3:46:45<8:41:35, 11.28s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4473251104354858, 'eval_runtime': 410.7169, 'eval_samples_per_second': 1.269, 'eval_steps_per_second': 1.269, 'epoch': 0.03}                                                                
+ 23%|████████████████████████████████████▋                                                                                                                           | 825/3600 [3:53:36<8:41:35, 11.28s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-825                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-825/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-825/special_tokens_map.json
+[2024-11-20 22:54:04,528] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step1650 is about to be saved!
+[2024-11-20 22:54:04,542] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-825/global_step1650/mp_rank_00_model_states.pt
+[2024-11-20 22:54:04,542] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-825/global_step1650/mp_rank_00_model_states.pt...
+[2024-11-20 22:54:04,772] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-825/global_step1650/mp_rank_00_model_states.pt.
+[2024-11-20 22:54:04,773] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-825/global_step1650/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 22:54:05,708] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-825/global_step1650/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 22:54:05,708] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-825/global_step1650/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 22:54:05,708] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1650 is ready now!
+{'loss': 1.2107, 'grad_norm': 0.6171532273292542, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.5369, 'grad_norm': 1.6381995677947998, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.4939, 'grad_norm': 0.5398985743522644, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.459, 'grad_norm': 1.1927576065063477, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                    
+{'loss': 1.4591, 'grad_norm': 0.5355756878852844, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.4079, 'grad_norm': 1.0324468612670898, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.4703, 'grad_norm': 0.9082580804824829, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+{'loss': 1.2948, 'grad_norm': 1.0036635398864746, 'learning_rate': 0.0001, 'epoch': 0.03}                                                                                                                   
+ 25%|████████████████████████████████████████                                                                                                                        | 900/3600 [4:07:53<8:26:48, 11.26s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4607137441635132, 'eval_runtime': 418.5246, 'eval_samples_per_second': 1.245, 'eval_steps_per_second': 1.245, 'epoch': 0.03}                                                                
+ 25%|████████████████████████████████████████                                                                                                                        | 900/3600 [4:14:51<8:26:48, 11.26s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-900                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-900/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-900/special_tokens_map.json
+[2024-11-20 23:15:20,081] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step1800 is about to be saved!
+[2024-11-20 23:15:20,104] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-900/global_step1800/mp_rank_00_model_states.pt
+[2024-11-20 23:15:20,104] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-900/global_step1800/mp_rank_00_model_states.pt...
+[2024-11-20 23:15:20,456] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-900/global_step1800/mp_rank_00_model_states.pt.
+[2024-11-20 23:15:20,459] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-900/global_step1800/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 23:15:21,567] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-900/global_step1800/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 23:15:21,567] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-900/global_step1800/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 23:15:21,567] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1800 is ready now!
+{'loss': 1.5017, 'grad_norm': 0.7732622027397156, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+{'loss': 1.4275, 'grad_norm': 0.7425190806388855, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+{'loss': 1.4424, 'grad_norm': 0.6782093644142151, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+{'loss': 1.49, 'grad_norm': 0.6914064288139343, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                     
+{'loss': 1.4737, 'grad_norm': 1.2722946405410767, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+{'loss': 1.3731, 'grad_norm': 0.9967614412307739, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+{'loss': 1.3554, 'grad_norm': 0.5614752173423767, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+ 27%|███████████████████████████████████████████▎                                                                                                                    | 975/3600 [4:29:12<8:25:55, 11.56s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4594156742095947, 'eval_runtime': 414.1638, 'eval_samples_per_second': 1.258, 'eval_steps_per_second': 1.258, 'epoch': 0.04}                                                                
+ 27%|███████████████████████████████████████████▎                                                                                                                    | 975/3600 [4:36:06<8:25:55, 11.56s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-975                                                                                                                                           
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-975/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-975/special_tokens_map.json
+[2024-11-20 23:36:34,498] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step1950 is about to be saved!
+[2024-11-20 23:36:34,511] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-975/global_step1950/mp_rank_00_model_states.pt
+[2024-11-20 23:36:34,511] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-975/global_step1950/mp_rank_00_model_states.pt...
+[2024-11-20 23:36:34,748] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-975/global_step1950/mp_rank_00_model_states.pt.
+[2024-11-20 23:36:34,749] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-975/global_step1950/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 23:36:35,692] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-975/global_step1950/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 23:36:35,693] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-975/global_step1950/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 23:36:35,693] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1950 is ready now!
+{'loss': 1.3043, 'grad_norm': 1.496825933456421, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                    
+{'loss': 1.5467, 'grad_norm': 0.5324123501777649, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+{'loss': 1.4766, 'grad_norm': 2.828305959701538, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                    
+{'loss': 1.6391, 'grad_norm': 1.0788389444351196, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+{'loss': 1.36, 'grad_norm': 1.3913893699645996, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                     
+{'loss': 1.3993, 'grad_norm': 1.0683279037475586, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                   
+{'loss': 1.3594, 'grad_norm': 0.14315283298492432, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                  
+{'loss': 1.3501, 'grad_norm': 1.996098518371582, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                    
+ 29%|██████████████████████████████████████████████▍                                                                                                                | 1050/3600 [4:50:38<8:00:18, 11.30s/it]
+***** Running Evaluation *****
+  Num examples = 521
+  Batch size = 1
+{'eval_loss': 1.4564799070358276, 'eval_runtime': 407.4512, 'eval_samples_per_second': 1.279, 'eval_steps_per_second': 1.279, 'epoch': 0.04}                                                                
+ 29%|██████████████████████████████████████████████▍                                                                                                                | 1050/3600 [4:57:25<8:00:18, 11.30s/itSaving model checkpoint to ./model_midtrain_results/checkpoint-1050                                                                                                                                          
+loading configuration file config.json from cache at /home/asteris/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B/snapshots/d149729398750b98c0af14eb82c78cfe92750796/config.json
+Model config Qwen2Config {
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 131072,
+  "max_window_layers": 28,
+  "model_type": "qwen2",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.44.1",
+  "use_cache": true,
+  "use_mrope": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+tokenizer config file saved in ./model_midtrain_results/checkpoint-1050/tokenizer_config.json
+Special tokens file saved in ./model_midtrain_results/checkpoint-1050/special_tokens_map.json
+[2024-11-20 23:57:53,753] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step2100 is about to be saved!
+[2024-11-20 23:57:53,767] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: ./model_midtrain_results/checkpoint-1050/global_step2100/mp_rank_00_model_states.pt
+[2024-11-20 23:57:53,767] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-1050/global_step2100/mp_rank_00_model_states.pt...
+[2024-11-20 23:57:54,006] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-1050/global_step2100/mp_rank_00_model_states.pt.
+[2024-11-20 23:57:54,007] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving ./model_midtrain_results/checkpoint-1050/global_step2100/zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2024-11-20 23:57:54,946] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved ./model_midtrain_results/checkpoint-1050/global_step2100/zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2024-11-20 23:57:54,946] [INFO] [engine.py:3536:_save_zero_checkpoint] zero checkpoint saved ./model_midtrain_results/checkpoint-1050/global_step2100/zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2024-11-20 23:57:54,946] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step2100 is ready now!
+{'loss': 1.373, 'grad_norm': 0.9221988320350647, 'learning_rate': 0.0001, 'epoch': 0.04}                                                                                                                    
+ 30%|████████████████████████████▏                                                                  | 1066/3600 [5:00:30<8:10:25, 11.61s/it]{'loss': 1.3528, 'grad_norm': 1.857804298400879, 'learning_rate': 0.0001, 'epoch': 0.04}                                                    
+{'loss': 1.4654, 'grad_norm': 0.7138072848320007, 'learning_rate': 0.0001, 'epoch': 0.04}                                                   
+{'loss': 1.5328, 'grad_norm': 1.9242498874664307, 'learning_rate': 0.0001, 'epoch': 0.04}                                                   
+{'loss': 1.1805, 'grad_norm': 1.5571229457855225, 'learning_rate': 0.0001, 'epoch': 0.04}                                                   
+{'loss': 1.2816, 'grad_norm': 0.5923532843589783, 'learning_rate': 0.0001, 'epoch': 0.04}                                                   
+ 31%|█████████████████████████████████████████████████▍                                                                                                             | 1119/3600 [5:10:46<8:16:31, 12.01s/it

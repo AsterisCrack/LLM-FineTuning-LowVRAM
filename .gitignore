@@ -1,4 +1,4 @@
-model_midtrain_results/
+model_midtrain_results*
 final_model/
 final_interrupted_model/
 logs/

@@ -46,9 +46,10 @@ if __name__ == "__main__":
         bnb_8bit_use_double_quant=True,
         bnb_8bit_compute_dtype=torch.bfloat16
     )
-
+    # Step 2: Get trained LORA and BNB model
+    lora_location = "final_interrupted_model/"
     model = AutoModelForCausalLM.from_pretrained(
-        model_name, 
+        lora_location, 
         torch_dtype=torch.float16,  # Use float16 for mixed precision training
         device_map=device,  # Distribute the model automatically across GPUs
         quantization_config=nf8_config,  # Use the bitsandbytes quantization config
@@ -56,9 +57,6 @@ if __name__ == "__main__":
     model.config.pad_token_id = tokenizer.pad_token_id
     print("Model loaded.")
 
-    # Step 2: Get trained LORA and BNB model
-    lora_location = "final_model/"
-    model.load_adapter(lora_location)
     print("LoRA and BNB model loaded.")
 
     # Obtain the prompt from the user
