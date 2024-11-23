@@ -21,10 +21,10 @@ def get_response(model, tokenizer, device, prompt):
         eos_token_id=tokenizer.eos_token_id,
         pad_token_id=tokenizer.pad_token_id,
         max_new_tokens=1024,
-        #do_sample=True,
-        #temperature=0.1,
-        #top_p=0.8,
-        #repetition_penalty=1.25,
+        do_sample=True,
+        temperature=0.6,
+        top_p=0.7,
+        repetition_penalty=1.25,
         streamer=streamer,
     )
 
@@ -47,7 +47,7 @@ if __name__ == "__main__":
         bnb_8bit_compute_dtype=torch.bfloat16
     )
     # Step 2: Get trained LORA and BNB model
-    lora_location = "final_interrupted_model/"
+    lora_location = "model_midtrain_results/checkpoint-1875/"
     model = AutoModelForCausalLM.from_pretrained(
         lora_location, 
         torch_dtype=torch.float16,  # Use float16 for mixed precision training
@@ -64,6 +64,9 @@ if __name__ == "__main__":
         prompt = input("Enter your prompt: ")
         if prompt == "exit":
             break
-
-        response, response_time = get_response(model, tokenizer, device, prompt)
-        print(f"Response time: {response_time:.2f} seconds")
+        
+        try:
+            response, response_time = get_response(model, tokenizer, device, prompt)
+            print(f"Response time: {response_time:.2f} seconds")
+        except KeyboardInterrupt:
+            print("Interrupted.")

@@ -116,7 +116,7 @@ def train(model, lora_location, tokenized_dataset, tokenizer, device):
         max_steps=3600,  # Total number of training steps
         # max_steps=2550,  # Total number of training steps - started at 1050
         save_steps=75,  # Save checkpoints every 25 steps
-        warmup_steps=30,  # Number of warmup steps for learning rate scheduler
+        warmup_steps=0,  # Number of warmup steps for learning rate scheduler
         lr_scheduler_type="linear",  # Use a linear learning rate scheduler
         deepspeed=ds_training_arguments,  # DeepSpeed training arguments
         logging_dir='./logs',  # Directory for TensorBoard logs
@@ -167,7 +167,7 @@ if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
     # Model name
     model_name = "Qwen/Qwen2.5-7B"
-    lora_location = "model_midtrain_results/checkpoint-1050/"
+    lora_location = "model_midtrain_results/checkpoint-1875/"
     
     # Load the pre-trained model
     print(f"Loading model {model_name}...")
