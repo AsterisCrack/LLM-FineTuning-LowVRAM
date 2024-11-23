@@ -36,7 +36,14 @@ if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
     # Model name
     model_name = "Qwen/Qwen2.5-7B"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name,
+        add_eos_token=True,
+        use_fast=True,
+        padding_side='left'
+    )
+    tokenizer.pad_token = tokenizer.eos_token  # Set padding token to EOS token
+
     # Load the pre-trained model
     print(f"Loading model {model_name}...")
     # Config for 8 bit quantization
@@ -47,7 +54,7 @@ if __name__ == "__main__":
         bnb_8bit_compute_dtype=torch.bfloat16
     )
     # Step 2: Get trained LORA and BNB model
-    lora_location = "model_midtrain_results/checkpoint-1875/"
+    lora_location = "final_model/"
     model = AutoModelForCausalLM.from_pretrained(
         lora_location, 
         torch_dtype=torch.float16,  # Use float16 for mixed precision training
