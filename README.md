@@ -27,7 +27,11 @@ python src/use_model.py
 We encourage playing with the sampling parameters to look for the best combination for your use case.
 
 ## IFEval Results
-
+To execute IFEval first run the notebook provided. Once you have the results run:
+```
+python -m instruction_following_eval.evaluation_main --input_data instruction_following_eval/data/input_data.jsonl --input_response_data instruction_following_eval/data/input_response_data.jsonl --output_dir instruction_following_eval/data/evaluation_results
+```
+Our results were: \
 Strict Accuracy Scores: \
 prompt-level: 0.3111111111111111 \
 instruction-level: 0.4495192307692308 \
