@@ -54,7 +54,7 @@ if __name__ == "__main__":
         bnb_8bit_compute_dtype=torch.bfloat16
     )
     # Step 2: Get trained LORA and BNB model
-    lora_location = "final_model/"
+    lora_location = "Asteris/qwen2.5-7B-LoRa-efficient-training"
     model = AutoModelForCausalLM.from_pretrained(
         lora_location, 
         torch_dtype=torch.float16,  # Use float16 for mixed precision training

@@ -24,7 +24,11 @@ You can then execute the following command to use the model:
 ```
 python src/use_model.py
 ```
-We encourage playing with the sampling parameters to look for the best combination for your use case.
+We encourage playing with the sampling parameters to look for the best combination for your use case. \
+Our trained model can be loaded from huggingface from:
+```
+Asteris/qwen2.5-7B-LoRa-efficient-training
+```
 
 ## IFEval Results
 To execute IFEval first run the notebook provided. Once you have the results run:
