@@ -30,6 +30,9 @@ Our trained model can be loaded from huggingface from:
 Asteris/qwen2.5-7B-LoRa-efficient-training
 ```
 
+## Benchmarks results
+{'Size': {'num_params': 7777097216, 'model_size_mb': 8918.6357421875}, 'Parameters': {'total_params': 7777097216, 'trainable_params': 161480704}, 'Time': {'total_time_sec': 614.96617436409, 'avg_time_per_example_sec': 2.0498872478803}, 'Latency': {'avg_latency_sec': 2.010942757924398}, 'Throughput': {'throughput_examples_per_sec': 0.49236969103074774}}
+
 ## IFEval Results
 To execute IFEval first run the notebook provided. Once you have the results run:
 ```
